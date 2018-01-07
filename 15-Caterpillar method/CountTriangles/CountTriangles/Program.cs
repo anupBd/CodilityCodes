@@ -27,7 +27,7 @@ namespace CountTriangles
         /// </param>
         private static void Main(string[] args)
         {
-            var x = GetNumberOfPossibleTriangles(new List<int> {10, 2, 5, 1, 8, 12});
+            var x = solution(new[] {10, 2, 5, 1, 8, 12});
 
             Console.WriteLine(x);
         }
@@ -41,18 +41,26 @@ namespace CountTriangles
         /// <returns>
         /// The <see cref="int"/>.
         /// </returns>
-        public static int GetNumberOfPossibleTriangles(List<int> nums)
+        public static int solution(int[] nums)
         {
             var possibleTriangle = 0;
-            for (var i = 0; i < nums.Count - 2; i++)
+            for (var i = 0; i < nums.Length - 2; i++)
             {
-                for (var j = i + 1; j < nums.Count - 1; j++)
+                for (var j = i + 1; j < nums.Length - 1; j++)
                 {
-                    var k = j + 1;
-                    if (nums[i] + nums[j] > nums[k] && nums[i] + nums[k] > nums[j] && nums[j] + nums[k] > nums[i])
+                    for (var k = j + 1; k < nums.Length; k++)
                     {
-                        possibleTriangle++;
+                        if (
+                            nums[i] + nums[j] > nums[k]
+                            && nums[i] + nums[k] > nums[j]
+                            && nums[j] + nums[k] > nums[i]
+                        )
+                        {
+                            possibleTriangle++;
+                        }
                     }
+
+
                 }
             }
 
