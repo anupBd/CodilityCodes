@@ -31,7 +31,7 @@ namespace CodilityCS
 
             //Console.WriteLine(new CountDiv().solution(0, 1, 11));
 
-              Console.WriteLine(new PassingCars().solution(new[] { 0,1,0,1,1}));
+              Console.WriteLine(new Solution().solution(new[]{1, 0 ,2 , 0 , 0 ,2}));
 
          //   Console.WriteLine(new OddOccurrencesInArray().solution(new[] { 9, 3, 9, 3, 9, 7, 9 }));
         }

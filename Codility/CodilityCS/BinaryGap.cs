@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodilityCS
 {
-    class Solution
+    class BinaryGap
     {
         public int solution(int N)
         {
